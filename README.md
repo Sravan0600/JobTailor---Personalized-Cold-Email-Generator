@@ -30,3 +30,12 @@ The **Personalized Job Application Email Generator** automates the process of cr
 - **GroqCloud**: AI models used for generating customized cold emails.
 - **Streamlit**: Provides the interactive user interface for the application.
 
+## How They Work Together
+1. **User Input**: The user inputs a job URL into the Streamlit app.
+2. **Data Extraction**: The app uses WebBaseLoader (from LangChain) to fetch and load the job content from the URL.
+3. **Data Cleaning**: The clean_text function sanitizes the loaded content by removing HTML tags, URLs, and extra spaces, ensuring that only meaningful text is processed.
+4. **Job Details Extraction**: The cleaned job content is sent to the LangChain components to extract relevant job details, including the role and required skills.
+5. **Portfolio Query**: The extracted skills are used to query the ChromaDB database for relevant links from the user's portfolio.
+6. **Email Generation**: The LLM from GroqCloud is then used to generate a tailored email using the job details and the relevant portfolio links.
+7. **Output Display**: The generated email is displayed in the Streamlit app for the user to see.
+
