@@ -39,3 +39,12 @@ The **Personalized Job Application Email Generator** automates the process of cr
 6. **Email Generation**: The LLM from GroqCloud is then used to generate a tailored email using the job details and the relevant portfolio links.
 7. **Output Display**: The generated email is displayed in the Streamlit app for the user to see.
 
+## Prerequisites
+- Python 3.x
+- Required libraries (listed in `requirements.txt`)
+
+## Installation Instructions
+```bash
+pip install -r requirements.txt
+
+
