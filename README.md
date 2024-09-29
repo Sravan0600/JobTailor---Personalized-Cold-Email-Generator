@@ -46,5 +46,39 @@ The **Personalized Job Application Email Generator** automates the process of cr
 ## Installation Instructions
 ```bash
 pip install -r requirements.txt
+```
+## Setup Instructions
+Set Up GroqCloud API: Add your GroqCloud API key to your environment variables:
+```bash
+export GROQCLOUD_API_KEY=your-api-key
+```
 
+## Prepare Your Portfolio CSV: Ensure your portfolio CSV file is placed in the resources/ folder. The CSV should contain:
+
+Techstack: List of technologies used in each project.
+Links: Links to project details or GitHub repositories.
+(A sample file is uploaded)
+
+## Running the Project
+Start the Streamlit App:
+```bash
+streamlit run app.py
+```
+
+## Usage
+1. Input Job Posting URL: Paste a job URL into the Streamlit interface.
+2. Portfolio Matching: The app compares the job description with your portfolio and retrieves matching projects.
+3. Generate Email: A cold email is automatically generated, which you can edit and copy for your application.
+
+
+## Troubleshooting
+1. Check your API key configuration if the email generation fails.
+2. Ensure your portfolio CSV is correctly formatted.
+   
+## Future Improvements
+1.Adding features to save generated emails to a file.
+2.Enhancing the matching algorithm for better accuracy.
+
+## Conclusion
+The Personalized Job Application Email Generator streamlines the job application process by automating cold email creation. It combines advanced AI from GroqCloud with LangChain for scraping and ChromaDB for portfolio matching, all within a user-friendly Streamlit interface.
 
