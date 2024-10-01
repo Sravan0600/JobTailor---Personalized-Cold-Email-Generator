@@ -1,3 +1,4 @@
+
 import os
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
@@ -46,15 +47,16 @@ class Chain:
             {job_description}
 
             ### INSTRUCTION:
-            You are Mohan, a business development executive at AtliQ. AtliQ is an AI & Software Consulting company dedicated to facilitating
-            the seamless integration of business processes through automated tools. 
-            Over our experience, we have empowered numerous enterprises with tailored solutions, fostering scalability, 
-            process optimization, cost reduction, and heightened overall efficiency. 
-            Your job is to write a cold email to the client regarding the job mentioned above describing the capability of AtliQ 
-            in fulfilling their needs.
-            Also add the most relevant ones from the following links to showcase Atliq's portfolio: {link_list}
-            Remember you are Mohan, BDE at AtliQ. 
+            You are John Doe, a recent graduate from Stanford University, where you completed your majors in Data Science. 
+            You possess a strong understanding of machine learning, artificial intelligence, data analysis, cloud computing, and other related technologies. 
+            During your academic career, you have successfully completed various projects that demonstrate your expertise in these fields, including predictive analytics, 
+            natural language processing, and big data management. 
+            Your job is to write a cold email to the hiring manager describing your qualifications and how they align with the requirements mentioned in the job description above. 
+            Additionally, include relevant projects from the following portfolio links: {link_list} to showcase your work and capabilities.
+            Highlight how these projects demonstrate your proficiency in handling real-world problems and providing effective solutions. 
+            Maintain a professional tone and emphasize your passion for data-driven solutions. 
             Do not provide a preamble.
+
             ### EMAIL (NO PREAMBLE):
 
             """
@@ -65,3 +67,5 @@ class Chain:
 
 if __name__ == "__main__":
     print(os.getenv("GROQ_API_KEY"))
+
+
